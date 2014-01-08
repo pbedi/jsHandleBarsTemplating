@@ -34,7 +34,7 @@
                 {{#each this}}
                 	<li>
                 		<img src="http://tut1.philip.co:81{{thumb}}" alt="{{fullName full_name}}">
-                		<p><a href="{{url}}" target="_new">{{tweet}}</a> | {{fullName full_name age}}</p>
+                		<p>{{link tweet}} | <a href="{{url}}" target="_new">{{fullName full_name age}}</a></p>
                 	</li>
                 {{/each}}
             </script>
@@ -154,6 +154,9 @@
 		Handlebars.registerHelper('fullName', function( fullname, age ){
 			return fullname.first_name + ' ' + fullname.last_name + ' ('+age+')';
 		});
+		Handlebars.registerHelper('link', function(text){
+			return new Handlebars.SafeString(text)
+		});
 		var Twitter = {
 			init: function(config){
 				this.url = 'http://api.philip.co/api.cfc?method=getTweetsChap21&q=';//'http://api.philip.co/api.cfc?method=getTweets&callback=?'
@@ -221,9 +224,12 @@
 					template = Handlebars.compile(self.template),
 					html;
 				self.tweets = $.map (self.results, function(tweet) { 
+						/* first reg ex is to find url and make it clickable, 2nd one is to find twitter handle 
+						and make it to clickable */
 						return {
 							author: tweet.author,
-							tweet:tweet.tweet_text,
+							tweet:tweet.tweet_text.replace(/(http:[^\s]+)/,'<a href="$1">$1</a>')
+												  .replace(/@([^\s:]+)/,'<a href="http://twitter.com/$1">@$1</a>'),
 							thumb:tweet.profile_image_url,
 							url:'https://twitter.com/'+tweet.author+'/status/'+tweet.id_str.split("_")[1],
 							age:tweet.age,

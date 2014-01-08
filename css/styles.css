@@ -1,0 +1,285 @@
+.jumbotron:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background: url("../images/masthead-pattern.png") repeat scroll center center transparent;
+    opacity: 0.4;
+}
+.jumbotron {
+    position: relative;
+    padding: 40px 0px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4), 0px 0px 30px rgba(0, 0, 0, 0.075);
+    background: linear-gradient(45deg, rgb(178, 73, 38) 0%, rgb(250, 165, 35) 100%) repeat scroll 0% 0% transparent;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.2) inset, 0px -3px 7px rgba(0, 0, 0, 0.2) inset;
+}
+.subhead {
+    text-align: left;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+.subhead p {
+    margin-bottom: 20px;
+}
+.jumbotron p {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 30px;
+}
+.lead {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+}
+.docs-lead {
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 30px;
+}
+.bs-docs-sidenav {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    margin: 30px 0 0;
+    padding: 0;
+    width: 228px;
+}
+.footer {
+    background-color: #F5F5F5;
+    border-top: 1px solid #E5E5E5;
+    margin-top: 70px;
+    padding: 5px 0;
+    text-align: center;
+}
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-links li:first-child {
+    padding-left: 0;
+}
+.footer-links li {
+    display: inline;
+    padding: 0 2px;
+}
+.bs-docs-example-submenus {
+    min-height: 180px;
+}
+.bs-docs-example-submenus > .pull-left + .pull-left {
+    margin-left: 20px;
+}
+.bs-docs-example-submenus .dropup > .dropdown-menu, .bs-docs-example-submenus .dropdown > .dropdown-menu {
+    display: block;
+    margin-bottom: 5px;
+    position: static;
+}
+.bs-docs-sidenav {
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    margin: 30px 0 0;
+    padding: 0;
+    width: 228px;
+}
+.bs-docs-sidenav > li > a {
+    border: 1px solid #E5E5E5;
+    display: block;
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+}
+.bs-docs-sidenav > li:first-child > a {
+    border-radius: 6px 6px 0 0;
+}
+.bs-docs-sidenav > li:last-child > a {
+    border-radius: 0 0 6px 6px;
+}
+.bs-docs-sidenav > li.active > a {
+    background: linear-gradient(45deg, #B24926 0%, #FAA523 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    box-shadow: 1px 0 0 rgba(0, 0, 0, 0.1) inset, -1px 0 0 rgba(0, 0, 0, 0.1) inset;
+    padding: 9px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+.bs-docs-sidenav .icon-chevron-right {
+    float: right;
+    margin-right: -6px;
+    margin-top: 2px;
+    opacity: 0.25;
+}
+.bs-docs-sidenav > li > a:hover {
+    background-color: #F5F5F5;
+}
+.bs-docs-sidenav a:hover .icon-chevron-right {
+    opacity: 0.5;
+}
+.bs-docs-sidenav .active .icon-chevron-right, .bs-docs-sidenav .active a:hover .icon-chevron-right {
+    opacity: 1;
+}
+.bs-docs-sidenav.affix {
+    top: 40px;
+}
+.bs-docs-sidenav.affix-bottom {
+    bottom: 270px;
+    position: absolute;
+    top: auto;
+}
+@media (max-width: 980px) {
+	body > .navbar-fixed-top .brand {
+	    float: left;
+	    margin-left: 0;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	}
+	.quick-links li {
+	    display: inline-block;
+	    margin: 5px;
+	}
+	.bs-docs-sidenav {
+	    margin-right: 0;
+	    margin-top: 30px;
+	    top: 0;
+	    width: 218px;
+	}
+}
+@media (min-width: 768px) and (max-width: 979px) {
+	body {
+	    padding-top: 0;
+	}
+	.jumbotron {
+	    margin-top: -20px;
+	}
+	.bs-docs-sidenav {
+	    margin-top: 20px;
+	    width: 166px;
+	}
+	.bs-docs-sidenav.affix {
+	    top: 0;
+	}
+}
+@media (max-width: 767px) {
+	body {
+	    padding-top: 0;
+	}
+	.jumbotron {
+	    margin-left: -20px;
+	    margin-right: -20px;
+	    margin-top: -20px;
+	    padding: 40px 20px;
+	}
+	.masthead h1 {
+	    font-size: 90px;
+	}
+	.masthead p, .masthead .btn {
+	    font-size: 24px;
+	}
+	.marketing .span4 {
+	    margin-bottom: 40px;
+	}
+	.bs-docs-social {
+	    margin: 0 -20px;
+	}
+	.show-grid [class*="span"] {
+	    margin-bottom: 5px;
+	}
+	.bs-docs-sidenav {
+	    margin-bottom: 20px;
+	    width: auto;
+	}
+	.bs-docs-sidenav.affix {
+	    position: static;
+	    top: 0;
+	    width: auto;
+	}
+	.footer {
+	    margin-left: -20px;
+	    margin-right: -20px;
+	    padding-left: 20px;
+	    padding-right: 20px;
+	}
+	.footer p {
+	    margin-bottom: 9px;
+	}
+}
+@media (max-width: 480px) {
+	body {
+	    padding-top: 0;
+	}
+	h2 small {
+	    display: block;
+	}
+	.jumbotron h1 {
+	    font-size: 45px;
+	}
+	.jumbotron p, .jumbotron .btn {
+	    font-size: 18px;
+	}
+	.jumbotron .btn {
+	    display: block;
+	    margin: 0 auto;
+	}
+	.subhead h1, .subhead p {
+	    text-align: center;
+	}
+	.marketing h1 {
+	    font-size: 30px;
+	}
+	.marketing-byline {
+	    font-size: 18px;
+	}
+	table code {
+	    white-space: normal;
+	    word-break: break-all;
+	    word-wrap: break-word;
+	}
+	.bs-docs-example-submenus > .pull-left {
+	    clear: both;
+	    float: none;
+	}
+	.bs-docs-example-submenus > .pull-left, .bs-docs-example-submenus > .pull-left + .pull-left {
+	    margin-left: 0;
+	}
+	.bs-docs-example-submenus p {
+	    margin-bottom: 0;
+	}
+	.bs-docs-example-submenus .dropup > .dropdown-menu, .bs-docs-example-submenus .dropdown > .dropdown-menu {
+	    float: none;
+	    margin-bottom: 10px;
+	    max-width: 180px;
+	}
+	.footer {
+	    padding-bottom: 20px;
+	    padding-top: 20px;
+	}
+}
+#twitter-share {
+    padding-top: 5px;
+}
+.docs-lead {
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.download-btn:hover {
+    color: #333333;
+    text-decoration: none;
+}
+.download-btn.ui-button-primary:hover {
+    color: #FFFFFF;
+}
+#menu-collapse {
+    margin-bottom: 20px;
+}
+.tweets{list-style:none;}
+ul.tweets li {padding:1em;}
+li > img {float: left; padding-right: 1em;}
+li > a {text-decoration: none;}

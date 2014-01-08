@@ -1,7 +1,7 @@
 jsHandleBarsTemplating
 ======================
 
- A sample based on VideoTutorialWatch session 20 &amp; 22 - which used Twitter query at that time, but now Twitter has stopped offering it without authentication. I hve used ColdFusion as back end to supply and filter data
+ A sample based on VideoTutorialWatch session 20 &amp; 22 - which used Twitter query at that time, but now Twitter has stopped offering it without authentication. I have used ColdFusion as back end to supply and filter data
 
 A CFC has been added to do JSON calls, you can use different server to do this call.
 

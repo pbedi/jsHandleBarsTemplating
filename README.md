@@ -21,3 +21,21 @@ http://www.youtube.com/watch?v=a2RJ46gNQNk
 Session 22:
 
 http://www.youtube.com/watch?v=JwFlFvazB9s
+
+Chapterwise index files for 13,14,15,23
+
+Chapter 24 uses php file to read and write content
+
+Chapter 25, 26 uses php and MySQL sample DB(Sakila) to read data and display list and details of actors:
+
+Here is the DB you need to download and install:
+http://dev.mysql.com/doc/sakila/en/sakila-installation.html
+
+Video Link: chap 25 https://www.youtube.com/watch?v=oSoTrzHFDZs
+Chap 26: https://www.youtube.com/watch?v=ZmssphpA1wo
+
+Chap 28 has been converted to use local db created in chap 20/22 as Twitter has stopped opening search API
+https://www.youtube.com/watch?v=NtROtaqPVxU
+
+This is a Plugin development demo
+

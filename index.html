@@ -154,6 +154,7 @@
 		Handlebars.registerHelper('fullName', function( fullname, age ){
 			return fullname.first_name + ' ' + fullname.last_name + ' ('+age+')';
 		});
+		//short cut of safe string is enclose it in three curly braces {{{}}}
 		Handlebars.registerHelper('link', function(text){
 			return new Handlebars.SafeString(text)
 		});

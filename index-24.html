@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<title>AJAX: Post</title>
+		<meta charset=utf-8>
+		<meta name=description content="">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Something to save</h1>
+			<form action="#"> 
+			<textarea name="content" id="content" cols="30" rows="10"></textarea> 
+			<p style="padding-top:5px;"><button type="submit" class="btn btn-primary">Save</button></p>
+			</form>
+		</div>
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			(function($) {
+				$.post('load.php', function(data){
+					if(data) {
+						$('#content').val(data);
+					}
+				});
+
+				$('form').on('submit', function(e){
+					$.post('save.php', $(this).serialize(), function(data){
+						console.log(data);
+					});
+					//console.log('submit');
+					e.preventDefault();
+				});
+			})(jQuery);
+		</script>
+	</body>
+</html>
